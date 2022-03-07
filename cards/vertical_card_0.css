@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    overflow: hidden;
+    background-color: #e1e1e1;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    color: white;
+    max-width: 13rem;
+    padding: 10rem 0 0;
+    border: solid 1px #c1c1c1;
+    background: url("https://www.planckstudios.com/media/photos/huge/Vertical_Jackson_EL_North_Color_1000_________.jpg");
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.15);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 0.75rem;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.25) 10%, rgba(0,0,0,1));
+}
+
