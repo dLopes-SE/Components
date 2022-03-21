@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    overflow: hidden;
+    background-color: #e1e1e1;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    position: relative;
+    color: white;
+    width: 200px;
+    height: min(170px, 100vh);
+    padding: min(10rem, 30vh) 0 0;
+    border: solid 1px #c1c1c1;
+    background: url("https://precitram.pt/wp-content/uploads/2021/10/entreprise_img-1-e1634752032786.jpg") no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.15),
+                10px 10px 25px rgb(0,0,0,0.25);
+    outline: none;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.75s ease,
+                box-shadow 0.75s ease;
+    transition-delay: 250ms;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.15),
+                10px 10px 30px rgb(0,0,0,0.25);
+}
+
+.card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 8.5rem;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.25) 5%, rgba(0,0,0,1) 90%);
+    transition: transform 750ms ease;
+    transition-delay: 0.25s;
+}
+
+.card-title {
+    position: absolute;
+    margin: 0;
+    height: 100%;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    /* background: rgba(0,0,0,0.5); */
+    text-align: center;
+    transition: transform 0.5s ease ;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    left: 10%;
+    top: 1.5rem;
+    width: 80%;
+    height: 3px;
+    background-color: #ed9a2e;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-content {
+    transform: translateY(-7.5rem);
+    background: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.25) 20%, rgba(0,0,0,1));
+}
+.card:hover .card-title::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.view-more {
+    position: absolute;
+    bottom: -100px;
+}

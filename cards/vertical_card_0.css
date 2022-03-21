@@ -9,7 +9,7 @@ body {
 }
 
 .card {
-    color: rgb(22, 172, 34);
+    color: white;
     max-width: 13rem;
     padding: 10rem 0 0;
     border: solid 1px #c1c1c1;
