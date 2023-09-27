@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  overflow: hidden;
+  background-color: #fff;
+  place-items: center;
+  min-height: 100vh;
+  font-family: 'Jura', sans-serif;
+}
+
+.box {
+  position: relative;
+  width: min(80vw, 350px);
+  padding: 40px;
+  background-image: url('https://precitram.pt/wp-content/uploads/2021/10/entreprise_img-1-e1634752032786.jpg');
+  background-size: cover;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  margin: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.box .number {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  background-color: #c7bb18;
+  box-shadow: 0 0 0 400px #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  font-size: 40px;
+  font-weight: 700;
+  transition: 0.75s;
+  z-index: 1;
+}
+
+.box .content {
+  position: relative;
+  z-index: 3;
+}
+
+.box .content h3, p {
+  transition: all 0.75s ease;
+}
+
+.box .content p {
+  position: relative;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  margin: 0 10%;
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-align: center;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.box:hover .number {
+  box-shadow: 0 0 0 0 #fff;
+}
+
+.box:hover h3 {
+  color: white;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.box:hover p {
+  color: white;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+
+.box a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #c7bb18;
+  box-shadow: 0 0 0 0 #c7bb18;
+}
+
+@media not (hover) {
+  .box .number { 
+    box-shadow: 0 0 0 0 #fff;
+  }
+
+  .box h3, p {
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  }
+}
